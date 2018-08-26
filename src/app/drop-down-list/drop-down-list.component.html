@@ -1,0 +1,11 @@
+<input type="text" [value]="someText" [ngClass]="higlightClasses">
+<br>
+<div class="dropdown_width">
+    <p-dropdown [options]="cities" filter="true" [autoWidth]="true" optionLabel="aaa" [style]='{"width":"100%"}'
+    (onChange)="changeCity($event.originalEvent,$event.value)"
+    [(ngModel)]="dropModel"
+    ></p-dropdown>
+</div>
+<p-button label="OK" (onClick)="testRxjs()"></p-button>
+
+

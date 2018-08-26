@@ -1,0 +1,7 @@
+<div class="form-group">
+  <input type="text" placeholder="some text" name="someOne" [formControl]="formSomeOne">
+  <button (click)="onSubmit()">submit</button>
+</div>
+<hr>
+<p>Form control value: {{formSomeOne.value | json}}</p>
+<p>Form control status: {{formSomeOne.status | json}}</p>
