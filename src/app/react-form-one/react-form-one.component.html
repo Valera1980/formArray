@@ -1,7 +1,20 @@
 <div class="form-group">
-  <input type="text" placeholder="some text" name="someOne" [formControl]="formSomeOne">
+  <form [formGroup]="formOne">
+     <div class="form-group">
+        <input type="text" placeholder="some text1" name="someOne" formControlName="formSomeOne">
+     </div>
+     <div class="form-group">
+        <input type="text" placeholder="some text2" name="someTwo" formControlName="formSomeTwo">
+     </div>
+     <div class="form-group">
+        <input type="text" placeholder="some text3" name="someThree" formControlName="formSomeThree">
+     </div>
+  </form>
+   
   <button (click)="onSubmit()">submit</button>
 </div>
 <hr>
-<p>Form control value: {{formSomeOne.value | json}}</p>
-<p>Form control status: {{formSomeOne.status | json}}</p>
+<!-- <p>Form control value "formSomeOne": {{formSomeOne.value | json}}</p>
+<p>Form control value "formSomeTwo": {{formSomeTwo.value | json}}</p>
+<p>Form control status "formSomeOne": {{formSomeOne.status | json}}</p>
+<p>Form control status "formSomeTwo": {{formSomeTwo.status | json}}</p> -->

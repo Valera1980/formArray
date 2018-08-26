@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-react-form-one',
@@ -8,14 +8,24 @@ import { FormControl } from '@angular/forms';
 })
 export class ReactFormOneComponent implements OnInit {
 
-  formSomeOne:FormControl = new FormControl();
-  constructor() { }
+  formOne:FormGroup;
+  
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.buildForm();
+  }
+
+  buildForm():void{
+     this.formOne = this.fb.group({
+      formSomeOne:"1",
+      formSomeTwo:"2",
+      formSomeThree:"3"
+     });
   }
 
   onSubmit(){
-    console.log("Name control value", this.formSomeOne.value);
+      console.log('​ReactFormOneComponent -> onSubmit -> this.formOne.value', this.formOne.value);
   }
 
 }
