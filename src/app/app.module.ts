@@ -17,6 +17,8 @@ import { ButtonModule} from 'primeng/button';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { ReactFormOneComponent } from './react-form-one/react-form-one.component';
+import { ParentlistComponent } from './parentlist/parentlist.component';
+import { ChildlistComponent } from './childlist/childlist.component';
 
 
 
@@ -26,7 +28,9 @@ import { ReactFormOneComponent } from './react-form-one/react-form-one.component
     DropDownListComponent,
     ParentComponent,
     ChildComponent,
-    ReactFormOneComponent
+    ReactFormOneComponent,
+    ParentlistComponent,
+    ChildlistComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,7 @@ import { ReactFormOneComponent } from './react-form-one/react-form-one.component
     FormsModule,
     ReactiveFormsModule
   ],
+  entryComponents:[ChildlistComponent],
   providers: [],
   bootstrap: [AppComponent],
   // schemas:[CUSTOM_ELEMENTS_SCHEMA]

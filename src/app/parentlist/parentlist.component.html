@@ -1,0 +1,17 @@
+<button class="btn btn-primary" (click)="add()">add</button>
+<button class="btn btn-primary ml-2" (click)="showFormData()">showFormData</button>
+
+<div  class="container bg-secondary">
+  <form [formGroup]="thisform">
+      <div class="form-group">
+          <input type="text" class="form-control" formControlName="email" placeholder="email">
+      </div>
+      <div  #dynamic formArrayName="users">
+          <div *ngFor="let person of users.controls; let i = index"  >
+              <div [formGroupName]="i">
+                    <app-childlist [group]="thisform.controls['users'].controls[i]"></app-childlist>
+              </div>
+          </div>
+      </div>
+  </form>
+</div>

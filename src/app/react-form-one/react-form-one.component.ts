@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-react-form-one',
@@ -18,7 +18,7 @@ export class ReactFormOneComponent implements OnInit {
 
   buildForm():void{
      this.formOne = this.fb.group({
-      formSomeOne:"1",
+      formSomeOne:["",[Validators.required,Validators.maxLength(7)]],
       formSomeTwo:"2",
       formSomeThree:"3"
      });
@@ -26,6 +26,10 @@ export class ReactFormOneComponent implements OnInit {
 
   onSubmit(){
       console.log('​ReactFormOneComponent -> onSubmit -> this.formOne.value', this.formOne.value);
+  }
+
+  get formSomeOne(){
+    return this.formOne.get('formSomeOne');
   }
 
 }
