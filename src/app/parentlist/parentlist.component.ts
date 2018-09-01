@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef, ComponentFactoryResolver, Com
 import { FormGroup,FormControl,FormBuilder, FormArray } from '@angular/forms';
 import { ChildlistComponent } from '../childlist/childlist.component';
 
+
 @Component({
   selector: 'app-parentlist',
   templateUrl: './parentlist.component.html',

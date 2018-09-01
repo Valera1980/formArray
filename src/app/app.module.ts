@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CitiesInterceptorService } from './intreceptor/cities-interceptor.service'; 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 /**
  * PRIMENG
@@ -19,6 +20,11 @@ import { ChildComponent } from './child/child.component';
 import { ReactFormOneComponent } from './react-form-one/react-form-one.component';
 import { ParentlistComponent } from './parentlist/parentlist.component';
 import { ChildlistComponent } from './childlist/childlist.component';
+import { IntreceptorComponent } from './intreceptor/intreceptor.component';
+import { RouterParentComponent } from './router-parent/router-parent.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RoutesModuleModule } from './routes-module/routes-module.module';
+import { RouterParamsComponent } from './router-params/router-params.component';
 
 
 
@@ -30,7 +36,11 @@ import { ChildlistComponent } from './childlist/childlist.component';
     ChildComponent,
     ReactFormOneComponent,
     ParentlistComponent,
-    ChildlistComponent
+    ChildlistComponent,
+    IntreceptorComponent,
+    RouterParentComponent,
+    NavbarComponent,
+    RouterParamsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,11 +49,17 @@ import { ChildlistComponent } from './childlist/childlist.component';
     ButtonModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RoutesModuleModule   
   ],
   entryComponents:[ChildlistComponent],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: CitiesInterceptorService,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent],
-  // schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

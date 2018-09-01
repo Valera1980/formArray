@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpfunService }  from './services/http/httpfun.service';
 import { Observable } from 'rxjs';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" 
+      type="button" data-toggle="collapse" 
+      (click)="toggleNavbar()"
+      data-target="#navbarNavAltMarkup" 
+      aria-controls="navbarNavAltMarkup" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup"   [ngClass]="{ 'show': navbarOpen }">
+    <div class="navbar-nav">
+  
+      <a class="nav-item nav-link" routerLinkActive="active" routerLink="/ddl">Drop down list</a>
+      <a class="nav-item nav-link" routerLink="/forms">Forms</a>
+      <a class="nav-item nav-link" routerLink="/interceptor">Interceptor</a>
+      <a class="nav-item nav-link" routerLink="/parentchild">Parent-Child</a> 
+      <a class="nav-item nav-link" routerLink="/city/777/999999">City</a> 
+      
+    </div>
+  </div>
+</nav>
+

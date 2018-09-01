@@ -9,10 +9,12 @@ import { EventEmitter } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
+  
   @Output() eventButton = new EventEmitter<any>();
   @Output() eventMouseOver = new EventEmitter<any>();
   @Output() eventMouseLeave = new EventEmitter<any>();
-  
+ 
+
   constructor() { }
 
   ngOnInit() {
@@ -23,7 +25,7 @@ export class ChildComponent implements OnInit {
   mouseOver(){
      this.eventMouseOver.emit('HOVER');
   }
-  mouseLeave(){
+   mouseLeave(){
     this.eventMouseLeave.emit('leave');
   }
 
