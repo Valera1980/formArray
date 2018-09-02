@@ -25,6 +25,8 @@ import { RouterParentComponent } from './router-parent/router-parent.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RoutesModuleModule } from './routes-module/routes-module.module';
 import { RouterParamsComponent } from './router-params/router-params.component';
+import { AuthComponent } from './auth/auth.component';
+import { Page404Component } from './page404/page404.component';
 
 
 
@@ -40,7 +42,10 @@ import { RouterParamsComponent } from './router-params/router-params.component';
     IntreceptorComponent,
     RouterParentComponent,
     NavbarComponent,
-    RouterParamsComponent
+    RouterParamsComponent,
+    AuthComponent,
+    Page404Component,
+    
   ],
   imports: [
     BrowserModule,

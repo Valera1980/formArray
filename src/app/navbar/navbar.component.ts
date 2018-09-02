@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthserviceService } from '../auth/authservice.service';
 
 
 @Component({
@@ -9,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   navbarOpen = false;
-  constructor() { }
+  isAuthUser:boolean = true;
+  constructor(private authService: AuthserviceService) { }
 
   ngOnInit() {
+    this.authService.isUserLogged.subscribe(isAuth => {
+        console.log('TCL: NavbarComponent -> ngOnInit -> data', isAuth);
+        this.isAuthUser = isAuth;
+    })
+      
   }
 
   toggleNavbar(){

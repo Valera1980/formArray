@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
   title = 'app';
+  showNav:boolean = false;
   observ$: Observable<any>;
   constructor(private httpS: HttpfunService){
 
