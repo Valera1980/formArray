@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpfunService }  from './services/http/httpfun.service';
 import { Observable } from 'rxjs';
 
@@ -8,7 +8,10 @@ import { Observable } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  ngOnInit(): void {
+    
+  }
   title = 'app';
   showNav:boolean = false;
   observ$: Observable<any>;

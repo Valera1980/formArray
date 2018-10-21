@@ -13,6 +13,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
 import { DropDownListComponent } from './drop-down-list/drop-down-list.component';
 import { ButtonModule} from 'primeng/button';
+import { SelectButtonModule } from 'primeng/selectbutton';
+import {InputTextModule} from 'primeng/inputtext';
+import {CalendarModule} from 'primeng/calendar';
+
+
 
 
 import { ParentComponent } from './parent/parent.component';
@@ -27,6 +32,9 @@ import { RoutesModuleModule } from './routes-module/routes-module.module';
 import { RouterParamsComponent } from './router-params/router-params.component';
 import { AuthComponent } from './auth/auth.component';
 import { Page404Component } from './page404/page404.component';
+import { ReactFormComponent } from './react-form/react-form.component';
+import { LeadComponent } from './lead/lead.component';
+import { TaskComponent } from './task/task.component';
 
 
 
@@ -45,6 +53,9 @@ import { Page404Component } from './page404/page404.component';
     RouterParamsComponent,
     AuthComponent,
     Page404Component,
+    ReactFormComponent,
+    LeadComponent,
+    TaskComponent,
     
   ],
   imports: [
@@ -55,7 +66,10 @@ import { Page404Component } from './page404/page404.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RoutesModuleModule   
+    RoutesModuleModule,
+    SelectButtonModule,
+    InputTextModule,
+    CalendarModule   
   ],
   entryComponents:[ChildlistComponent],
   providers: [

@@ -1,0 +1,48 @@
+
+<button (click)="getVal()" [disabled]="!reactForm.valid">get</button>
+
+<div [formGroup]="reactForm" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="name" pInputText />
+  <br>
+
+  <p-selectButton [options]="types" formControlName="btns"></p-selectButton>
+
+<br>
+<div formArrayName="leads">
+  <div *ngFor="let lead of leads.controls; let i=index">
+    <!-- 
+      <input type="text" [formControlName]="i"> -->
+
+      <div [formGroupName]="i">
+          <app-lead 
+          [group]="reactForm.controls['leads'].controls[i]"
+          >
+          </app-lead>
+
+          <!-- <app-lead></app-lead> -->
+
+
+
+          <div formArrayName="tasks">
+            <!-- {{ lead.get('tasks').controls.tasks | json}} -->
+            <div *ngFor="let task of lead.get('tasks').controls;  let j=index">
+              <div [formGroupName]="j">
+                <input type="text" formControlName="taskId">
+                <input type="text" formControlName="taskName">
+              </div>
+            </div>
+            <button (click)="addTask(lead)">addTask</button>
+          </div>
+
+    </div>
+   
+    
+
+    <!-- [leadName]="leads.controls[i].value.leadName"
+    [leadDate]="leads.controls[i].value.leadDate" -->
+
+  </div>
+</div>
+</div>
+
+<button (click)="addLead()">add lead</button>
