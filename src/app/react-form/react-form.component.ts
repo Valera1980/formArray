@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { FormBuilder,FormGroup, FormArray, Validators} from '@angular/forms';
-import { ILead } from '../lead';
+import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-react-form',
@@ -11,6 +11,12 @@ export class ReactFormComponent implements OnInit {
 
   reactForm:FormGroup;
   taskId:number = 0;
+  sss;
+  anonimName:string;
+
+  comboData=[
+    {value:0,label:'аноним'},{value:1,label:'UserOne'}
+  ]
 
   // leads:ILead[];
   types = [
@@ -40,6 +46,8 @@ export class ReactFormComponent implements OnInit {
     //   taskName: ' new task with id' + this.taskId
     // }))
   }
+
+  @ViewChild('combo') combo:ElementRef;
   
   ngOnInit() {
     
@@ -51,6 +59,7 @@ export class ReactFormComponent implements OnInit {
     });
 
   }
+
 
   // createTasksArray(){
   //   return this.fb.group({
@@ -71,6 +80,15 @@ export class ReactFormComponent implements OnInit {
     console.log(this.reactForm.value.leads);
   }
   onSubmit(){}
+  profileSelected(){
+     console.log('TCL: ReactFormComponent -> profileSelected -> this.sss', this.sss);
+  }
+
+  inputAnnName(){
+    const item = this.comboData.find(item => item.value == 0);
+    item.label = this.anonimName;
+    this.sss = 0;
+  }
   
 
 }

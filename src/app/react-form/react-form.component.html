@@ -46,3 +46,20 @@
 </div>
 
 <button (click)="addLead()">add lead</button>
+
+<h3>Editable</h3>
+  <div class="block_my">
+    <p-dropdown #combo [disabled]="anonimName && anonimName.length == 0" [options]="comboData" [(ngModel)]="sss" (onChange)="profileSelected()"
+       [style]="{'width':'150px'}" placeholder="Select profile"></p-dropdown>
+  </div>
+  
+<div class="block_my" *ngIf="sss == 0" > 
+  <input type="text" (input)="inputAnnName()"
+   required placeholder="change name" 
+    [(ngModel)]="anonimName" #anname="ngModel">
+    <h6 *ngIf="sss == 0 && anname.touched && anname.invalid">Пустое имя не допустимо</h6>
+</div>
+
+   
+
+<p>comboData  {{comboData | json}}</p>

@@ -17,7 +17,6 @@ export class LeadComponent implements OnInit {
 
   ngOnInit() {
     
-    console.log('TCL: LeadComponent -> ngOnInit -> this.group', this.group);
   }
 
 }
