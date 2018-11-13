@@ -1,0 +1,16 @@
+
+.card__class{
+    width: 500px;
+    height: 100px;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+}
+.header__class{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input__class{
+    width: 100%;
+}

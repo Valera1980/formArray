@@ -16,6 +16,7 @@ import { ButtonModule} from 'primeng/button';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import {InputTextModule} from 'primeng/inputtext';
 import {CalendarModule} from 'primeng/calendar';
+import {InplaceModule} from 'primeng/inplace';
 
 
 
@@ -35,6 +36,12 @@ import { Page404Component } from './page404/page404.component';
 import { ReactFormComponent } from './react-form/react-form.component';
 import { LeadComponent } from './lead/lead.component';
 import { TaskComponent } from './task/task.component';
+import { ThrowErrorComponent } from './throw-error/throw-error.component';
+import { DecorComponent } from './decor/decor.component';
+import { ParentasyncComponent } from './parentasync/parentasync.component';
+import { ChildasyncComponent } from './childasync/childasync.component';
+import { InplaceComponent } from './inplace/inplace.component';
+import { CardModule} from 'primeng/card';
 
 
 
@@ -56,6 +63,11 @@ import { TaskComponent } from './task/task.component';
     ReactFormComponent,
     LeadComponent,
     TaskComponent,
+    ThrowErrorComponent,
+    DecorComponent,
+    ParentasyncComponent,
+    ChildasyncComponent,
+    InplaceComponent,
     
   ],
   imports: [
@@ -69,7 +81,9 @@ import { TaskComponent } from './task/task.component';
     RoutesModuleModule,
     SelectButtonModule,
     InputTextModule,
-    CalendarModule   
+    CalendarModule ,
+    InplaceModule,
+    CardModule   
   ],
   entryComponents:[ChildlistComponent],
   providers: [
