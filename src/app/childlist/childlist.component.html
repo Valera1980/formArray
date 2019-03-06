@@ -3,7 +3,9 @@
   <input formControlName="age" type="number">
 </div> -->
 
-<div [formGroup]="group" class="form-group">
-    <input type="text" formControlName="name" >
+<div *ngIf="group" [formGroup]="group" class="form-group">
+    <!-- <input type="text" formControlName="name" appMutate> -->
+    <app-phone-input type="number" formControlName="name"></app-phone-input>
+
     <input type="number" formControlName="age">
 </div>

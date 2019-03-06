@@ -1,0 +1,5 @@
+<div [formGroup]="formOne">
+ <app-phone-input formControlName="phone"></app-phone-input>
+ <p>{{phone.errors | json}}</p>
+</div>
+<button (click)="getForm()">get values</button>

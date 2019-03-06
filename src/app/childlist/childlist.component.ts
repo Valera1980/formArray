@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
@@ -6,6 +6,7 @@ import { FormGroup } from '@angular/forms';
   selector: 'app-childlist',
   templateUrl: './childlist.component.html',
   styleUrls: ['./childlist.component.css']
+
 })
 export class ChildlistComponent implements OnInit {
 

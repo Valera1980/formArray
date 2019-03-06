@@ -42,6 +42,15 @@ import { ParentasyncComponent } from './parentasync/parentasync.component';
 import { ChildasyncComponent } from './childasync/childasync.component';
 import { InplaceComponent } from './inplace/inplace.component';
 import { CardModule} from 'primeng/card';
+import { ProgressComponent } from './progress/progress.component';
+import {ProgressBarModule} from 'primeng/progressbar';
+import { DroppipeComponent } from './droppipe/droppipe.component';
+import { ComboPipe } from './combo.pipe';
+import { ServiceAsyncComponent } from './service-async/service-async.component';
+import { MutateDirective } from './mutate.directive';
+import { PhoneInputComponent } from './phone-input/phone-input.component';
+import { FormoneComponent } from './formone/formone.component';
+
 
 
 
@@ -68,6 +77,13 @@ import { CardModule} from 'primeng/card';
     ParentasyncComponent,
     ChildasyncComponent,
     InplaceComponent,
+    ProgressComponent,
+    DroppipeComponent,
+    ComboPipe,
+    ServiceAsyncComponent,
+    MutateDirective,
+    PhoneInputComponent,
+    FormoneComponent
     
   ],
   imports: [
@@ -83,7 +99,8 @@ import { CardModule} from 'primeng/card';
     InputTextModule,
     CalendarModule ,
     InplaceModule,
-    CardModule   
+    CardModule,
+    ProgressBarModule   
   ],
   entryComponents:[ChildlistComponent],
   providers: [

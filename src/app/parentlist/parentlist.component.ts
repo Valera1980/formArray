@@ -23,13 +23,20 @@ export class ParentlistComponent implements OnInit {
     this.thisform = this.fb.group({
       email:'gavrilow777@gmail.com',
       users: this.fb.array([])
-    })
+    });
+
+    this.users.controls.forEach(element => {
+      element.valueChanges.subscribe(t => {
+
+      })
+    });
   }
+  
   add(){
     // const factory: ComponentFactory<any> = this.factoryComponent.resolveComponentFactory(ChildlistComponent);
     // const component:ComponentRef<ChildlistComponent> = this.dynamicDiv.createComponent(factory);
     this.users.push(this.fb.group({
-       name:'aaa',
+       name:77777,
        age:33
     }));
     
