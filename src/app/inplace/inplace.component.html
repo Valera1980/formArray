@@ -1,15 +1,21 @@
+<input placeholder="client name"><br>
+<input placeholder="client name"><br>
+<input placeholder="client name"><br>
+<input placeholder="client name"><br>
+<input placeholder="client name"><br>
+<input placeholder="client name" [(ngModel)]="aaa"><br>
 <p-inplace #iii >
   <span pInplaceDisplay>
-      Click to Edit
+     привязати існующий профайл
   </span>
   <span pInplaceContent>
     <p-card class="card__class">
               
       <div class="header__class">  
-          <button pButton type="button" label="Save" icon="pi pi-check" style="margin-right: 5px;"></button>
+          <button pButton type="button" label="связать" icon="pi pi-check" style="margin-right: 5px;" (click)="link(iii)"></button>
           <button pButton type="button" label="Cancel" icon="pi pi-times" class="ui-button-secondary" (click)="close(iii)"></button>
       </div>
-      <div> <input  class="input__class" type="text" value="PrimeNG" width="auto" pInputText> </div>
+      <div> <input  class="input__class" type="text" value="PrimeNG" width="auto" pInputText [(ngModel)]="bbb"> </div>
      
   </p-card>
   </span>

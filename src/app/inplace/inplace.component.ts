@@ -7,12 +7,20 @@ import { Component, OnInit} from '@angular/core';
 })
 export class InplaceComponent   implements OnInit {
 
+  aaa:string;
+  bbb:string;
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  close( iii) {
+  link(iii){
+     this.aaa = this.bbb;
+     iii.active = false;
+  }
+
+  close(iii){
     iii.active = false;
   }
 
